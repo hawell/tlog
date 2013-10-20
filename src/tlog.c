@@ -85,7 +85,7 @@ void tlog(int level, const char* format, ...)
 	va_end(args);
 }
 
-void log_hex(int level, const char* str, void* d, int l)
+void tlog_hex(int level, const char* str, void* d, int l)
 {
 	if (level > min_level)
 		return;

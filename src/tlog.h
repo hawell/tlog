@@ -35,10 +35,10 @@
 #define	TLOG_INFO		6
 #define	TLOG_DEBUG		7
 
-#define DEBUG(...) tlog(TLOG_DEBUG, __VA_ARGS__)
-#define INFO(...) tlog(TLOG_INFO, __VA_ARGS__)
-#define WARNING(...) tlog(TLOG_WARNING, __VA_ARGS__)
-#define ERROR(...) tlog(TLOG_ERR, __VA_ARGS__)
+#define TL_DEBUG(...) tlog(TLOG_DEBUG, __VA_ARGS__)
+#define TL_INFO(...) tlog(TLOG_INFO, __VA_ARGS__)
+#define TL_WARNING(...) tlog(TLOG_WARNING, __VA_ARGS__)
+#define TL_ERROR(...) tlog(TLOG_ERR, __VA_ARGS__)
 
 #ifdef __cplusplus
 extern "C" {
@@ -48,7 +48,7 @@ int tlog_init(int mode, int level, void* param);
 
 void tlog(int level, const char* format, ...);
 
-void log_hex(int level, const char* str, void* d, int l);
+void tlog_hex(int level, const char* str, void* d, int l);
 
 #ifdef __cplusplus
 }
